@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Matrix Data Capture",
+  "version": "1.0",
+  "description": "Capture data from Matrix Mediassist summary tabulation page.",
+  "permissions": [
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "time-left.png",
+      "48": "time-left.png",
+      "128": "time-left.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "time-left.png",
+    "48": "time-left.png",
+    "128": "time-left.png"
+  }
+}
